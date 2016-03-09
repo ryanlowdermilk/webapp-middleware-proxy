@@ -9,6 +9,7 @@ A reverse-proxy powered by your production website. The rule-based proxy allows 
 ## Installation
 ### Option 1: Microsoft Azure
 ### Option 2: node.js
+### Option 3: Local web server
 
 ## Usage
 ### Basic Usage
