@@ -22,6 +22,6 @@ A reverse-proxy powered by your production website. The rule-based proxy allows 
 #### Creating new rules base one regular expressions
 
 ## Special Thanks
-A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) for his initial work on using Azure Web Apps as a reverse-proxy. His early work in this area is the reason this project exists. Thanks, Tom!
+A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) for his initial work on using Azure Web Apps as a reverse-proxy. His early work is the reason this project exists. Thanks, Tom!
 
 
