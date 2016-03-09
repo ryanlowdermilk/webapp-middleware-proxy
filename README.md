@@ -2,7 +2,7 @@
 
 # webapp-middleware-proxy
 
-A reverse-proxy powered by your production website. The rule-based proxy allows for modifying, overwritng and injecting HTML, JS and CSS, URL routing, caching over the top of your website! Create new mobile and desktop apps without ever touching your production website!
+A reverse-proxy powered by your production website. The rule-based proxy allows modifying, overwritng and injecting of content (HTML, JS and CSS), URL routing and caching atop of your production website! Create new mobile and desktop apps without ever modifying your production website!
 
 ## Features
 
@@ -13,6 +13,6 @@ A reverse-proxy powered by your production website. The rule-based proxy allows 
 ## Usage
 ### Basic Usage
 ### Advanced Usage
-#### Creating new rules
+#### Creating new rules base one regular expressions
 
 
