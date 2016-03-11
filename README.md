@@ -24,7 +24,7 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 ### Option 4: Development workstation
 - Install IIS
 - Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
-- See Option 3
+- Complete the steps in Option 3
 ## Usage
 ### Basic Usage
 ### Advanced Usage
