@@ -25,7 +25,7 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 ### Option 4: Development workstation
 - Install IIS
 - Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
-- Complete the steps in Option 3
+- Complete the steps in [Option 3](#option3)
 ## Configuration
 The web-middleware-proxy is driven by the web.config file. A simple XML file, the web.config configures the URL Rewrite component in IIS - the main component which allows injection and modifying of content, BEFORE it reaches the end user.
 
