@@ -8,12 +8,13 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 - Inject Javascript inline and/or via external files
 - Override CSS inline and/or via external files
 - Rewrite URLs e.g. http://site/products?category=mens&article=shirts to http://site.com/mens/shirts
+- Spoof User-Agent
 - Anything (Not really, but a lot is possible!)
 
 ## Quick Installation
 ### Option 1: Microsoft Azure
 - Create a new Azure Web App
-- Upload, via FTP, applicationHost.xtd (to root) and web.config (to /site/wwwwroot)
+- Upload, via FTP, applicationHost.xtd (to /site) and web.config (to /site/wwwwroot)
 - Restart Azure Web App
 
 ### Option 2: node.js (Coming Soon!)
