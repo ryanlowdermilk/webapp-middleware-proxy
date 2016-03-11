@@ -12,10 +12,19 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 
 ## Installation
 ### Option 1: Microsoft Azure
-### Option 2: node.js
-### Option 3: Local web server
-### Option 4: Development workstation
+- Create a new Azure Web App
+- Upload, via FTP, applicationHost.xtd (to root) and web.config (to /site/wwwwroot)
+- Restart Azure Web App
 
+### Option 2: node.js (Coming Soon!)
+### Option 3: Local web server
+- Using IIS Manager, create a 'New Website'
+- In the new folder for the website, add the web.config file
+- BONUS: You can add and modify the existing rules in the web.config using IIS Manager. Select the Website and use URL Rewrite component.
+### Option 4: Development workstation
+- Install IIS
+- Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
+- See Option 3
 ## Usage
 ### Basic Usage
 ### Advanced Usage
