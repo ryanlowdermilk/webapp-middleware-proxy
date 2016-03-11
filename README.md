@@ -2,7 +2,7 @@
 
 # webapp-middleware-proxy
 
-A reverse-proxy powered by your production website. The rule-based proxy allows modifying, overwritng and injecting of content (HTML, JS and CSS), URL routing and caching atop of your production website! Create new mobile and desktop apps without ever modifying your production website!
+A reverse-proxy powered by your production website. The rule-based proxy supports injecting, modifying and overwriting of content (HTML, JS and CSS), URL routing and caching atop of your production website! Create new mobile and desktop apps, powered by your website, without ever modifying your production website!
 
 ## Features
 - Inject Javascript inline and/or via external files
@@ -23,5 +23,3 @@ A reverse-proxy powered by your production website. The rule-based proxy allows 
 
 ## Special Thanks
 A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) for his initial work on using Azure Web Apps as a reverse-proxy. His early work is the reason this project exists. Thanks, Tom!
-
-
