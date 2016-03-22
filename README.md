@@ -15,7 +15,7 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 ### Option 1: Microsoft Azure
 - Create a new Azure Web App
 - Clone this repo
-- From your local clone, edit web.config to replace 'contosotravel-proxy' with the CNAME for your new Azure Web app
+- From your clone, edit web.config to replace 'contosotravel-proxy' with the CNAME for your new Azure Web app
 - Upload, via FTP, applicationHost.xtd (to /site) and web.config (to /site/wwwwroot)
 - Restart Azure Web App
 - Navigate to your Azure Web app
