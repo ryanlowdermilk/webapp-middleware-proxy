@@ -7,17 +7,19 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 ## Features
 - Inject Javascript inline and/or via external files
 - Override CSS inline and/or via external files
-- Rewrite URLs e.g. http://site/products?category=mens&article=shirts to http://site.com/mens/shirts
+- Rewrite URLs
 - Spoof User-Agent
 - Anything (Not really, but a lot is possible!)
 
 ## Quick Installation
 ### Option 1: Microsoft Azure
 - Create a new Azure Web App
-- Edit web.config and replace 'contosotravel-proxy' with the CNAME for your new Azure Web app.
+- Clone this repo
+- From your local clone, edit web.config to replace 'contosotravel-proxy' with the CNAME for your new Azure Web app
 - Upload, via FTP, applicationHost.xtd (to /site) and web.config (to /site/wwwwroot)
 - Restart Azure Web App
-- Navigate to your new Azure Web app.
+- Navigate to your Azure Web app
+- Yay! You have a reverse-proxy of your production site that you inject, overwrite and modify content
 
 ### Option 2: node.js (Coming Soon!)
 
@@ -33,7 +35,7 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 - Complete the steps in [Option 3](#option3)
 
 ## Configuration
-The web-middleware-proxy is driven by the web.config file. A simple XML file, the web.config configures the URL Rewrite component in IIS - the main component which allows injection and modifying of content, BEFORE it reaches the end user.
+The web-middleware-proxy is driven by the web.config file - a simple XML file. The web.config configures the URL Rewrite component in IIS - the main component which drivers the injection and modifying of content. It's worth noting that all of this modification happens BEFORE it reaches the end user!
 
 The easiest way to configure and test the webapp-middleware-proxy is by using your development workstation and using IIS Manager to create and modify rules. See [Option 3](#option3).
 
