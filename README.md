@@ -19,17 +19,18 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 - Upload, via FTP, applicationHost.xtd (to /site) and web.config (to /site/wwwwroot)
 - Restart Azure Web App
 - Navigate to your Azure Web app
-- Yay! You have a reverse-proxy of your production site that you inject, overwrite and modify content
+- Yay! You have a reverse-proxy of the Azure Travel Website. You can now inject, overwrite and modify content without affecting production!
 
 ### Option 2: node.js (Coming Soon!)
 
 <a name="option3"></a>
-### Option 3: Local web server
+### Option 3: IIS on Windows Server 
 - Using IIS Manager, create a 'New Website'
-- In the new folder for the website, add the web.config file
-- BONUS: You can add and modify the existing rules in the web.config using IIS Manager. Select the Website and use URL Rewrite component.
+- In the new folder for the website, add the web.config file from this repo
+- Edit web.config to replace 'contosotravel-proxy' with the host name of your new Website
+- BONUS: Modify the rules in the web.config file is easier using IIS Manager. Select the Website (left side) and use URL Rewrite component (right side).
 
-### Option 4: Development workstation
+### Option 4: IIS on Windows development workstation
 - Install IIS
 - Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
 - Complete the steps in [Option 3](#option3)
