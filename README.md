@@ -24,11 +24,7 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 ### Option 2: node.js (Coming Soon!)
 
 <a name="option3"></a>
-### Option 3: IIS on Windows Server 
-- Using IIS Manager, create a 'New Website'
-- In the new folder for the website, add the web.config file from this repo
-- Edit web.config to replace 'contosotravel-proxy.azurewebsites.net' with the website host of your new Website
-- BONUS: Modify the rules in the web.config file is easier using IIS Manager. Select the Website (left side) and use URL Rewrite component (right side).
+### Option 3: IIS on Windows Server (Coming Soon!)
 
 ### Option 4: IIS on Windows development workstation
 - Install IIS
