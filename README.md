@@ -23,13 +23,15 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 
 ### Option 2: node.js (Coming Soon!)
 
-<a name="option3"></a>
 ### Option 3: IIS on Windows Server (Coming Soon!)
 
 ### Option 4: IIS on Windows development workstation
 - Install IIS
 - Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
-- Complete the steps in [Option 3](#option3)
+- Using IIS Manager, create a 'New Website'
+- In the new folder for the website, add the web.config file from this repo
+- Edit web.config to replace 'contosotravel-proxy' with the host name of your new Website
+- BONUS: Modify the rules in the web.config file is easier using IIS Manager. Select the Website (left side) and use URL Rewrite component (right side).
 
 ## Configuration
 The web-middleware-proxy is driven by the web.config file - a simple XML file. The web.config configures the URL Rewrite component in IIS - the main component which drivers the injection and modifying of content. It's worth noting that all of this modification happens BEFORE it reaches the end user!
