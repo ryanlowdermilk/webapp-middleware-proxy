@@ -62,7 +62,7 @@ A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) fo
 
 ## Samples
 * Removing Compatability mode from older websites
-~~~
+```xml
 <outboundRules> 
     <clear />   
     <rule name="X-UA-Compatible" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">  
@@ -70,9 +70,10 @@ A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) fo
         <action type="Rewrite" />    
     </rule>  
 </outboundRules> 
-~~~
+```
+
 * Adding a new CSS Style Sheet  
-~~~
+```xml
 <outboundRules/>  
     <clear />     
     <rule name="_Style" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">    
@@ -80,4 +81,4 @@ A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) fo
         <action type="Rewrite" value="&lt;link href='mystyle.css' rel='stylesheet' /&gt;" />
     </rule >  
 </outboundRules >
-~~~
+```
