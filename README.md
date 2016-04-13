@@ -24,6 +24,23 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 ### Option 2: node.js (Coming Soon!)
 
 ### Option 3: IIS on Windows Server (Coming Soon!)
+- Install IIS
+- Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
+- Using IIS Manager, create a 'New Website'
+- In the new folder for the website, add the web.config file from this repo
+- In IIS select the newly created website node
+- In the Features Pane select URL Rewrite
+- In the Actions Pane on the right hand side select "View Server Variables..."
+- Select "Add..." to add a new server variable and add each of the following
+    - HTTP_ACCEPT_ENCODING
+    - HTTP_X_ORIGINAL_ACCEPT_ENCODING
+    - HTTP_X_PROXY_HOST
+    - HTTP_X_ROOT_DOMAIN
+- After each server variable has been added Select the root server node in IIS
+- In the Feature Pane double click Application Request Routing
+- In the Actions Pane on the right select "Server Proxy Settings..."
+- Ensure that "Enable proxy" is checked
+- You now have a working reverse proxy to contosotravel.azurewebsites.net
 
 ### Option 4: IIS on Windows development workstation
 - Install IIS
@@ -40,3 +57,27 @@ The easiest way to configure and test the webapp-middleware-proxy is by using yo
 
 ## Special Thanks
 A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) for his initial work on using Azure Web Apps as a reverse-proxy. His early work is the reason this project exists. Thanks, Tom!
+
+
+
+## Samples
+* Removing Compatability mode from older websites
+~~~  
+<outboundRules> 
+    <clear />   
+    <rule name="X-UA-Compatible" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">  
+        <match filterByTags="None" pattern="&lt;meta http-equiv='X-UA-Compatible' content='IE=EmulateIE7' /&gt;" />  
+        <action type="Rewrite" />    
+    </rule>  
+</outboundRules> 
+~~~
+* Adding a new CSS Style Sheet  
+~~~
+    <outboundRules/>  
+        <clear />     
+        <rule name="_Style" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">    
+            <match filterByTags="None" pattern="&lt;link href='app.css' rel='stylesheet' /&gt;" />    
+            <action type="Rewrite" value="&lt;link href='mystyle.css' rel='stylesheet' /&gt;" />  
+        </rule >  
+    </outboundRules >
+~~~
