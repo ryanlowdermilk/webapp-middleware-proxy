@@ -62,7 +62,7 @@ A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) fo
 
 ## Samples
 * Removing Compatability mode from older websites
-~~~  
+~~~
 <outboundRules> 
     <clear />   
     <rule name="X-UA-Compatible" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">  
@@ -73,11 +73,11 @@ A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) fo
 ~~~
 * Adding a new CSS Style Sheet  
 ~~~
-    <outboundRules/>  
-        <clear />     
-        <rule name="_Style" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">    
-            <match filterByTags="None" pattern="&lt;link href='app.css' rel='stylesheet' /&gt;" />    
-            <action type="Rewrite" value="&lt;link href='mystyle.css' rel='stylesheet' /&gt;" />  
-        </rule >  
-    </outboundRules >
+<outboundRules/>  
+    <clear />     
+    <rule name="_Style" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">    
+        <match filterByTags="None" pattern="&lt;link href='app.css' rel='stylesheet' /&gt;" />
+        <action type="Rewrite" value="&lt;link href='mystyle.css' rel='stylesheet' /&gt;" />
+    </rule >  
+</outboundRules >
 ~~~
