@@ -66,8 +66,8 @@ A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) fo
 <outboundRules> 
     <clear />   
     <rule name="X-UA-Compatible" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">  
-        <match filterByTags="None" pattern="&lt;meta http-equiv='X-UA-Compatible' content='IE=EmulateIE7' /&gt;" />  
-        <action type="Rewrite" />    
+       <match filterByTags="None" pattern="&lt;meta http-equiv='X-UA-Compatible' content='IE=EmulateIE7' /&gt;" />  
+       <action type="Rewrite" />    
     </rule>  
 </outboundRules> 
 ```
@@ -77,8 +77,8 @@ A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) fo
 <outboundRules/>  
     <clear />     
     <rule name="_Style" preCondition="_ResponseIsHtml" patternSyntax="ExactMatch">    
-        <match filterByTags="None" pattern="&lt;link href='app.css' rel='stylesheet' /&gt;" />
-        <action type="Rewrite" value="&lt;link href='mystyle.css' rel='stylesheet' /&gt;" />
+       <match filterByTags="None" pattern="&lt;link href='app.css' rel='stylesheet' /&gt;" />
+       <action type="Rewrite" value="&lt;link href='mystyle.css' rel='stylesheet' /&gt;" />
     </rule >  
 </outboundRules >
 ```
