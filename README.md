@@ -23,7 +23,7 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 
 ### Option 2: node.js (Coming Soon!)
 
-### Option 3: IIS on Windows Server (Coming Soon!)
+### Option 3: IIS on Windows Server
 - Install IIS
 - Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
 - Using IIS Manager, create a 'New Website'
