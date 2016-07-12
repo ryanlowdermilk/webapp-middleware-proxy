@@ -21,9 +21,7 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 - Navigate to your Azure Web app
 - Yay! You have a reverse-proxy of the Azure Travel Website. You can now inject, overwrite and modify content without affecting production!
 
-### Option 2: node.js (Coming Soon!)
-
-### Option 3: IIS on Windows Server
+### Option 2: IIS on Windows Server
 - Install IIS
 - Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
 - Using IIS Manager, create a 'New Website'
@@ -42,13 +40,15 @@ A reverse-proxy powered by your production website. The rule-based proxy support
 - Ensure that "Enable proxy" is checked
 - You now have a working reverse proxy to contosotravel.azurewebsites.net
 
-### Option 4: IIS on Windows development workstation
+### Option 3: IIS on Windows development workstation
 - Install IIS
 - Install Application Request Routing 3.0 via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) (WebPi)
 - Using IIS Manager, create a 'New Website'
 - In the new folder for the website, add the web.config file from this repo
 - Edit web.config to replace 'contosotravel-proxy' with the host name of your new Website
 - BONUS: Modify the rules in the web.config file is easier using IIS Manager. Select the Website (left side) and use URL Rewrite component (right side).
+
+### Option 4: node.js (Not yet)
 
 ## Configuration
 The web-middleware-proxy is driven by the web.config file - a simple XML file. The web.config configures the URL Rewrite component in IIS - the main component which drivers the injection and modifying of content. It's worth noting that all of this modification happens BEFORE it reaches the end user!
@@ -57,8 +57,6 @@ The easiest way to configure and test the webapp-middleware-proxy is by using yo
 
 ## Special Thanks
 A special "thank you" goes to [@TomChantler](https://twitter.com/tomchantler) for his initial work on using Azure Web Apps as a reverse-proxy. His early work is the reason this project exists. Thanks, Tom!
-
-
 
 ## Samples
 * Removing Compatability mode from older websites
